@@ -11,15 +11,23 @@ Ce repository contient un ensemble de fonctions permettant le manipulation d'une
 
 1. foncer ou eclaircir les pixels d'une image ppm p3
 
-2. passer en noir et blanc en utilisant les niveaux de gris
+   dans ce programme il etait question de prendre une image  la foncer ou l'eclaircir en fonction de la couleur primaire du pixel entre par l'utilisateur .Pour ce faire j'ai tout d'abord declarer une structure pixel avec pour ses trois couleurs primaires ici n prenant comme pour types des entiers ensuite une structure pour representet une image en considerant celle ci comme un taableau a double entree de pixels de taille hauteur*largeur avec chaque couleur primaire d'un pixel pouvant prendre comme valeur maximal maxval(255).Ensuite j'ai non seulement definir une fonction de lecture prenant en entree un fichier (de type .ppm evidemment) et une image  a conserver dans ce fichier: la fonction va d'bord verifier si le format du fichier est p3 parcequ'il y'en a p6 ,si c'est pas le cas s'arrete et envoie une message dd'erreur stoppant le programme lors de l'execution et si c'est le  cas  lire valeurs des champs de l'image(dimensions et valmax d'abord) et enfin  parcourir l'image comme je disait la considerant comme un tableau a double entree.j'ai ensuite defini une fonction pour enregistrer un fichier qui lorsque sera appeler de la fonction proprement dites permettra de creer ou enregistrer un fichier qui conservera les modificaations effectuer sur le precedent.I est a noter que le fichier de depart s'ouvrira en lecture et le fichier a enregistre en ecriture c'est ainsi en c.pour la fonction proprement dite l'on appelra en premier lieu la fonction de lecture pour lire le fichier ou image si vs voulez a modifier ensuite la modification se fera ainsi:la fonction parcourera chaque pixel et ensuite chaque champ du pixel ,comparer la couleur entree (par l'utilisateur lors de l'execution)  a chaque couleur du pixel en s'assurant au passage que la couleur entree est effectivement celle parmi les couleurs primaires du pixel  lorsqu'elle trouvera la couleur recherche elle aujoutera(reduira resp) la valeur entree par l'utilisateur pour la modification ,le resultat de cette valeur sera comparee a valmax si elle est sup la fonction renverra cette valeur a 255 si elle est inferieur a 0 elle la renverra a 0.Enfin elle appelera la fonction pour sauveger les modifications dans le nouveau fichier.le main dans ce programme c'est pour tester la fonction a travers les donnees entre par l'utilisateur et l'appel de la fonction proprement dite.
+   ##--- redige par kaze yemtsa darelle kesty 23u2684 
+  
 
-3. creer le negatif d'une image
+3. passer en noir et blanc en utilisant les niveaux de gris
 
-4. afficher la taille d'une image
+4. creer le negatif d'une image
 
-5. recadrer une image
+5. afficher la taille d'une image
 
-6. appliquer a une image le filtre median:
+6. recadrer une image
+
+dans ce programme il etait question de prendre une image la recadrer en fonction de la hauteur de depart ,la hauteur de fin la largeur de depart la largeur de fin entrees par l'utilisateur. Pour ce faire j'ai tout d'abord declarer une structure pixel avec pour ses trois couleurs primaires ici n prenant comme pour types des entiers ensuite une structure pour representet une image en considerant celle ci comme un taableau a double entree de pixels de taille hauteur*largeur avec chaque couleur primaire d'un pixel pouvant prendre comme valeur maximal maxval(255).Ensuite j'ai non seulement definir une fonction de lecture prenant en entree un fichier (de type .ppm evidemment) et une image  a conserver dans ce fichier: la fonction va d'bord verifier si le format du fichier est p3 parcequ'il y'en a p6 ,si c'est pas le cas s'arrete et envoie une message dd'erreur stoppant le programme lors de l'execution et si c'est le  cas  lire valeurs des champs de l'image(dimensions et valmax d'abord) et enfin  parcourir l'image comme je disait la considerant comme un tableau a double entree.j'ai ensuite defini une fonction pour enregistrer un fichier qui lorsque sera appeler de la fonction proprement dites permettra de creer ou enregistrer un fichier qui conservera les modificaations effectuer sur le precedent.Il est a noter que le fichier de depart s'ouvrira en lecture et le fichier a enregistre en ecriture c'est ainsi en c.pour la fonction proprement dite l'on appelra en premier lieu la fonction de lecture pour lire le fichier ou image si vs voulez a modifier ensuite la modification se fera ainsi:la nous allons tout d'abord definir les nouvelles valeurs de la hauteur et de la largeur(valeurs obtenues par la difference resp de la hauteur de fin et celle de depart et la largeur de fin et celle de depart) qui vont permettre de recadrer l'image ensuite parcourir la nouvelle image qui sera d'ailleurs predefini comme une structure image en prenant deux compteurs allant de 0(norme en c) a la nouvelle hauteur resp et a la nouvelle largeur et en copiant  le pixel situé à la position [premier compteur+la hauteur de depart][deuxieme compteur+largeur de depart] de l'image de depart dans le pixel de la nouvelle image.La copie se fera au fur et a mesure que avancera avec les compteurs.Apres ca on appelera la fonction d'ecriture pour y creer un fichier qui enregistrera les  modifications du fichier precedent.Ainsi donc dans le main il s'agira de tester le programme a travers les donnees entrees par l'utilisateur notamment :le fichier de depart ,la hauteur de depart ,la hauteur de fin la largeur de depart la largeur de fin ,le fichier modifie ou recadre.
+###--- redigee par kaze yemtsa darelle kesty 23u2684
+
+
+8. appliquer a une image le filtre median:
 
 ###  DESCRIPTION DU PROGRAMME 6 : Appliquer a une image le filtre median a une image ppm p3
 ### --- redigee par LAGO MARTINE PAHOLA de matricule 24G2294 --- ###
@@ -110,6 +118,13 @@ Le programme principal main ici  récupère la commande entrée par l'utilisateu
 ### COMPILATION :
 Sous Windows : 
 gcc ppmviewer.c -o ppmviewer.exe
+
+Pour compiler chaque fichier (si l'on utilise un terminal):
+fonction foncer et eclaircir: gcc dom.c -o dom
+execution:./dom
+fonction recadrer : gcc cut.c -o cut
+execution:./cut
+
 
 ## Sous linux
 gcc ppmviewer.c -o ppmviewer
