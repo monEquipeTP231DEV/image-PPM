@@ -50,7 +50,7 @@ Ce repository contient un ensemble de fonctions permettant le manipulation d'une
      e. Application du filtre median;
      f. Sauvegarde de l'image filtree;
      g. Liberation de la memoire;
-     # COMPUILATION ET EXECUTION
+     # COMPILATION ET EXECUTION
      . Utiliser le gcc pour compiler le programme:
      gcc filtre_median.c -o image_creee
      ./image_creee
