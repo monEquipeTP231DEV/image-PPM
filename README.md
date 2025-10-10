@@ -58,6 +58,22 @@ Ce repository contient un ensemble de fonctions permettant le manipulation d'une
      .image dde depart enregistree dans " image_depart.ppm";
      .image filtree enregistree dans "image_median.ppm".
      traitament terminee.
+     
+### Objectif :
+### --- redigee par KENMOGNE KAMTO BLONDELLE PATRICIA de Matricule 23U2608 --- ###
+Cette fonction a pour but de lire les informations contenues dans l’en-tête d’un fichier image au format PPM (Portable Pixmap) afin d’en afficher les dimensions, c’est-à-dire la largeur et la hauteur de l’image.
+
+### Description du fonctionnement :
+La fonction commence par ouvrir le fichier image en mode lecture. Elle vérifie ensuite que le fichier est bien au format PPM, puis ignore les lignes de commentaires qui commencent par le symbole #.
+Elle lit ensuite les dimensions de l’image (largeur et hauteur) ainsi que la valeur maximale des couleurs. Si ces informations sont valides, la fonction affiche la taille de l’image dans la console.
+En cas d’erreur (fichier introuvable, format invalide ou données manquantes), un message explicite est affiché à l’écran.
+
+### Test effectué :
+Pour vérifier le bon fonctionnement de la fonction, un petit fichier PPM a été utilisé comme exemple. Après exécution du programme, la taille correcte de l’image a été affichée, prouvant que la fonction fonctionne correctement et lit bien les informations de l’en-tête.
+
+### Résultat attendu :
+Affichage de la taille de l’image sous la forme :
+« Taille de l’image : largeur x hauteur pixels »
 
      
 
