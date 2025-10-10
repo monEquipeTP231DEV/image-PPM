@@ -87,6 +87,54 @@ débute par l’ouverture d’un ﬁchier image en mode lecture et passe a la le
 ouvre le ﬁchier de sor en mode écriture. POUR ﬁn elle crée le néga f de l’image en retranchant la
 valeur de chaqu’un par la valeur maximale et elle ferme les deux ﬁchiers.
 
+### TPN°3 DE INF231  passer en noir et blanc en utilisant les niveaux de gris
+### --- REDIGEE PAR NGOUNOU KOUOKAM MARY CHRISTY de matricule 24G2039 --- ###
+Dans le cadre de l'unité d'enseignement INF231 dispensée par le Dr Melataguia aux étudiants de niveau 2 informatique fondamentale à l'université de Yaoundé 1, il nous a été demandé à nous étudiants de produire en groupe une application de gestion d'images PPM( portable pixmap format) de version ASCII( P3) codée en langage c . Le dit programme devant être chargé de lire une image sans lire les commentaires, changer la luminosité des pixels dominants, transformer l'image en noir sur blanc, faire le négatif d'une image, afficher la taille d'une image , couper une portion de l'image et enfin appliquer sur l'image un filtre méfiant. C'est le travail que notre groupe a essayé de réaliser. 
+Après répartition des tâches, celle qui me fut assignée fut la réalisation du programme chargé de la transformation d'une image en noir sur blanc via l'utilisation des niveaux de gris.
+
+Le programme que j'ai réalisé mis à part la définition de la structure pixel,caractérisée par les niveaux en nombre entiers des trois couleurs qui la composent (rouge, vert et bleu) et la définition de la structure image caractérisée par son nombre ( entier)de pixels  en hauteur, en largeur ainsi que la valeur maximale de chaque coordonnées de couleur, est composé de 03 principales fonctions .
+La première ( void lireImage) est  chargée d'une part d'ouvrir un fichier image ppm en mode lecture. Si le fichier saisi par l'utilisateur est introuvable, il renvoie "impossible d'ouvrir le fichier".
+D'autre part , elle  vérifie que le format d'image entré par l'utilisateur est P3, ignore les commentaires dans la lecture, lis la valeur maximale ainsi que les pixels constitutifs de l'image. 
+La deuxième fonction ( void sauvegarderImage) quand à elle est chargée d'enregistrer les modifications faite sur une image dans un nouveau fichier.ppm.
+Enfin,la troisième fonction ( void niveau de gris) met l'image en noir sur blanc en attribuant à chaque coordonnées de couleurs de chaque pixel la moyenne des 03 coordonnées initiales. . 
+
+
+Le programme principal main ici  récupère la commande entrée par l'utilisateur:
+-Si l'utilisateur entre la commande quit, il y'a un message "au revoir" à l'écran, puis fin d'exécution du programme .
+
+
+-Si il entre la commande gris , le programme fait appel à la fonction niveauxdegris qui rend l'image noir sur blanc . Cette image modifiée est par la suite stockée dans un autre fichier.ppm via l'appel de la fonction sauvegarderImage. 
+-Si la commande saisie ne correspond nie
+ à quit , ni à gris , le programme affiche "au revoir" ce qui marque la fin de l'exécution du programme .
+
+### COMPILATION :
+Sous Windows : 
+gcc ppmviewer.c -o ppmviewer.exe
+
+## Sous linux
+gcc ppmviewer.c -o ppmviewer
+
+### COMMENT UTILISER LE PROGRAMME 
+Sous windows:
+-lancer le programme sur l'invite de commande
+-compiler
+-taper ppmviewer
+-taper enfin une commande 
+### Sous linux 
+-ouvrir un terminal dans le dossier du fichier 
+- taper le code mis dans la partie compilation ( sous linux)
+- lancer le programme ./ppmviewer
+- entrer une commande.
+
+### TECHNOLOGIE UTILISÉE 
+Langage : langage c 
+Bibliothèques: stdio.h, stdlib.h, string.h
+compilateur : GCC 
+
+
+
+
+
      
 
 
