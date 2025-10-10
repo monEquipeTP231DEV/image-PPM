@@ -59,7 +59,7 @@ Ce repository contient un ensemble de fonctions permettant le manipulation d'une
      .image filtree enregistree dans "image_median.ppm".
      traitament terminee.
      
-### Objectif :
+### Objectif :4. afficher la taille d'une image
 ### --- redigee par KENMOGNE KAMTO BLONDELLE PATRICIA de Matricule 23U2608 --- ###
 Cette fonction a pour but de lire les informations contenues dans l’en-tête d’un fichier image au format PPM (Portable Pixmap) afin d’en afficher les dimensions, c’est-à-dire la largeur et la hauteur de l’image.
 
@@ -74,6 +74,18 @@ Pour vérifier le bon fonctionnement de la fonction, un petit fichier PPM a ét�
 ### Résultat attendu :
 Affichage de la taille de l’image sous la forme :
 « Taille de l’image : largeur x hauteur pixels »
+
+### Objectif 3. creer le negatif d'une image
+### --- redigee par SOUOTCHUENG KOM ANNAELLE de matricule 24G2820 --- ###
+Ce programme a pour but de créer le néga f d’une image contenu dans un ﬁchier ppm (portable pixel
+MAP)
+### Description du programme
+Ce programme est cons tué de deux structures ( la structure image ayant pour champ la hauteur, la
+largeur , la valeur maximal «maxval » et un tableau a deux dimensions de pixels, la structure pixel
+ayant pour champ r, g ,b( qui sont les couleurs) ) d’une fonc on qui est appelé dans le main et qui
+débute par l’ouverture d’un ﬁchier image en mode lecture et passe a la lecture de l’image , Ensuite il
+ouvre le ﬁchier de sor en mode écriture. POUR ﬁn elle crée le néga f de l’image en retranchant la
+valeur de chaqu’un par la valeur maximale et elle ferme les deux ﬁchiers.
 
      
 
